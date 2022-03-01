@@ -61,7 +61,7 @@ pm2.Client.launchBus(function(err, bus) {
       return;
     }
 
-    const logger = logging.log('pm2-error');
+    const logger = logging.log(conf.pm2_stackdriver_error_log_name);
 
     // The metadata associated with the entry
     const metadata = {

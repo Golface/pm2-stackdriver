@@ -1,7 +1,6 @@
 const pm2 = require('pm2');
 var pmx = require('pmx');
 const {Logging} = require('@google-cloud/logging');
-const packageJSON = require('./package');
 
 const conf = pmx.initModule();
 
@@ -36,12 +35,12 @@ pm2.Client.launchBus(function(err, bus) {
 
   bus.on('log:out', function(log) {
 
-    if (log.process.name === packageJSON.name) {
+    if (log.process.name === '@golface/pm2-stackdriver') {
       return;
     }
 
     // Selects the log to write to
-    const logger = logging.log('pm2-info');
+    const logger = logging.log(conf.pm2_stackdriver_log_name);
 
 
     // The metadata associated with the entry
@@ -58,11 +57,11 @@ pm2.Client.launchBus(function(err, bus) {
   });
 
   bus.on('log:err', function(log) {
-    if (log.process.name === packageJSON.name) {
+    if (log.process.name === '@golface/pm2-stackdriver') {
       return;
     }
 
-    const logger = logging.log('pm2-error');
+    const logger = logging.log(conf.pm2_stackdriver_error_log_name);
 
     // The metadata associated with the entry
     const metadata = {

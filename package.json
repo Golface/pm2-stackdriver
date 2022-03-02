@@ -1,6 +1,6 @@
 {
-  "name": "@golface/pm2-stackdriver",
-  "version": "0.0.6",
+  "name": "@Golface/pm2-stackdriver",
+  "version": "0.0.7",
   "description": "PM2 stackdriver logging module",
   "main": "app.js",
   "dependencies": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.golface.com.tw:golface-family/developer/web-developer/pm2-stackdriver.git"
+    "url": "git://github.com/Golface/pm2-stackdriver.git"
   },
   "config": {
     "pm2_stackdriver_on_google": false,

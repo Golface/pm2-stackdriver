@@ -21,7 +21,7 @@
     {
       "merge_logs": true,
       "max_memory_restart": "200M",
-      "script": "app.js"
+      "script": "index.js"
     }
   ],
   "author": "YMH",

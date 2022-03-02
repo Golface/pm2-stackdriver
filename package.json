@@ -19,6 +19,7 @@
   },
   "apps": [
     {
+      "name": "pm2-stackdriver",
       "merge_logs": true,
       "max_memory_restart": "200M",
       "script": "index.js"

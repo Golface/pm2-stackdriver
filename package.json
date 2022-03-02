@@ -1,6 +1,6 @@
 {
-  "name": "@Golface/pm2-stackdriver",
-  "version": "0.0.9",
+  "name": "pm2-stackdriver",
+  "version": "0.0.10",
   "description": "PM2 stackdriver logging module",
   "dependencies": {
     "@google-cloud/logging": "^4.5.2",
